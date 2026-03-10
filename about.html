@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Earlybird Transport & Logistics Services</title>
+    <meta name="description" content="Learn about Earlybird Transport & Logistics Services - Our story, mission, vision, and the dedicated team behind Nigeria's trusted logistics partner.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --navy-dark: #0a1628;
+            --navy: #1a365d;
+            --navy-light: #2c5282;
+            --gold: #d4a012;
+            --gold-light: #ecc94b;
+            --gold-dark: #b7860b;
+            --red: #c41e3a;
+            --cream: #faf8f5;
+            --white: #ffffff;
+        }
+
+        .dark {
+            --bg-primary: #0a1628;
+            --bg-secondary: #1a365d;
+            --text-primary: #ffffff;
+            --text-secondary: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--cream);
+            color: var(--navy-dark);
+            overflow-x: hidden;
+        }
+
+        .dark body {
+            background: var(--navy-dark);
+            color: var(--white);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--navy-dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 5px;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(212, 160, 18, 0.4); }
+            50% { box-shadow: 0 0 40px rgba(212, 160, 18, 0.8); }
+        }
+
+        @keyframes slide-in-left {
+            from { opacity: 0; transform: translateX(-100px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes slide-in-right {
+            from { opacity: 0; transform: translateX(100px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes fade-in-up {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes count-up {
+            from { opacity: 0; transform: scale(0.5); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes rotate-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .animate-float { animation: float 3s ease-in-out infinite; }
+        .animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+        .animate-slide-left { animation: slide-in-left 1s ease-out forwards; }
+        .animate-slide-right { animation: slide-in-right 1s ease-out forwards; }
+        .animate-fade-up { animation: fade-in-up 0.8s ease-out forwards; }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .header.scrolled {
+            background: rgba(10, 22, 40, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-link {
+            position: relative;
+            color: var(--white);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link:hover {
+            color: var(--gold);
+        }
+
+        .nav-link.active {
+            color: var(--gold);
+        }
+
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        /* Page Hero */
+        .page-hero {
+            min-height: 60vh;
+            background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 50%, var(--navy-light) 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(212, 160, 18, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(212, 160, 18, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(44, 82, 130, 0.2) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                linear-gradient(30deg, transparent 49.5%, rgba(212, 160, 18, 0.03) 49.5%, rgba(212, 160, 18, 0.03) 50.5%, transparent 50.5%),
+                linear-gradient(-30deg, transparent 49.5%, rgba(212, 160, 18, 0.03) 49.5%, rgba(212, 160, 18, 0.03) 50.5%, transparent 50.5%);
+            background-size: 60px 100px;
+            pointer-events: none;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--gold);
+        }
+
+        .breadcrumb .current {
+            color: var(--gold);
+        }
+
+        /* Buttons */
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: var(--navy-dark);
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(212, 160, 18, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            padding: 14px 38px;
+            border-radius: 50px;
+            font-weight: 600;
+            border: 2px solid var(--gold);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            background: var(--gold);
+            color: var(--navy-dark);
+            transform: translateY(-3px);
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--navy-dark);
+            position: relative;
+            display: inline-block;
+        }
+
+        .dark .section-title {
+            color: var(--white);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
+            border-radius: 2px;
+        }
+
+        .section-title.left-align::after {
+            left: 0;
+            transform: translateX(0);
+        }
+
+        /* Story Section */
+        .story-section {
+            background: var(--cream);
+            position: relative;
+        }
+
+        .dark .story-section {
+            background: var(--navy-dark);
+        }
+
+        .story-image {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(26, 54, 93, 0.2);
+        }
+
+        .story-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: 20px;
+            bottom: 20px;
+            border: 3px solid var(--gold);
+            border-radius: 24px;
+            z-index: -1;
+        }
+
+        .story-image-placeholder {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            color: var(--gold);
+        }
+
+        .experience-badge {
+            position: absolute;
+            bottom: -30px;
+            right: 30px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: var(--navy-dark);
+            padding: 25px 35px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(212, 160, 18, 0.4);
+        }
+
+        .experience-badge .number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        /* Mission Vision Section */
+        .mission-vision-section {
+            background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+            position: relative;
+        }
+
+        .mission-vision-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4a012' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        .mv-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 160, 18, 0.2);
+            border-radius: 24px;
+            padding: 50px 40px;
+            text-align: center;
+            transition: all 0.4s ease;
+            height: 100%;
+        }
+
+        .mv-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            background: rgba(212, 160, 18, 0.1);
+        }
+
+        .mv-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            font-size: 2.5rem;
+            color: var(--navy-dark);
+        }
+
+        /* Values Section */
+        .values-section {
+            background: var(--cream);
+        }
+
+        .dark .values-section {
+            background: linear-gradient(180deg, var(--navy) 0%, var(--navy-dark) 100%);
+        }
+
+        .value-card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(26, 54, 93, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dark .value-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(212, 160, 18, 0.2);
+        }
+
+        .value-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .value-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .value-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 30px 60px rgba(26, 54, 93, 0.15);
+        }
+
+        .dark .value-card:hover {
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2rem;
+            color: var(--gold);
+            transition: all 0.4s ease;
+        }
+
+        .value-card:hover .value-icon {
+            transform: scale(1.1) rotate(10deg);
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: var(--navy-dark);
+        }
+
+        /* Team Section */
+        .team-section {
+            background: var(--white);
+        }
+
+        .dark .team-section {
+            background: var(--navy-dark);
+        }
+
+        .team-card {
+            background: var(--cream);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(26, 54, 93, 0.1);
+        }
+
+        .dark .team-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(212, 160, 18, 0.2);
+        }
+
+        .team-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 30px 60px rgba(26, 54, 93, 0.2);
+        }
+
+        .team-image {
+            height: 280px;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: var(--gold);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-image::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to top, rgba(10, 22, 40, 0.8), transparent);
+        }
+
+        .team-social {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .team-card:hover .team-social {
+            opacity: 1;
+        }
+
+        .team-social a {
+            width: 40px;
+            height: 40px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--navy-dark);
+            transition: all 0.3s ease;
+        }
+
+        .team-social a:hover {
+            background: var(--white);
+            transform: scale(1.1);
+        }
+
+        .team-info {
+            padding: 25px;
+            text-align: center;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -20%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--navy-dark);
+            line-height: 1;
+        }
+
+        .stat-label {
+            color: var(--navy-dark);
+            font-weight: 600;
+            margin-top: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--gold), var(--gold-light));
+            border-radius: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 24px;
+            height: 24px;
+            background: var(--gold);
+            border-radius: 50%;
+            border: 4px solid var(--navy-dark);
+            z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-dot {
+                left: 20px;
+            }
+        }
+
+        .timeline-content {
+            width: 45%;
+            padding: 30px;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(26, 54, 93, 0.1);
+            border: 1px solid rgba(26, 54, 93, 0.1);
+        }
+
+        .dark .timeline-content {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(212, 160, 18, 0.2);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px !important;
+            }
+        }
+
+        .timeline-year {
+            display: inline-block;
+            padding: 8px 20px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: var(--navy-dark);
+            border-radius: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(212, 160, 18, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--navy-dark);
+            color: var(--white);
+            position: relative;
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.7);
+            transition: all 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--gold);
+            padding-left: 5px;
+        }
+
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background: var(--gold);
+            color: var(--navy-dark);
+            transform: translateY(-5px);
+        }
+
+        .newsletter-input {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            padding: 15px 25px;
+            color: var(--white);
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .newsletter-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .newsletter-input:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(10, 22, 40, 0.98);
+            z-index: 999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            font-size: 1.5rem;
+            color: var(--white);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-menu a:hover {
+            color: var(--gold);
+        }
+
+        /* Bird Logo SVG */
+        .bird-logo {
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .experience-badge {
+                position: relative;
+                bottom: 0;
+                right: 0;
+                margin-top: 20px;
+                display: inline-block;
+            }
+
+            .experience-badge .number {
+                font-size: 2rem;
+            }
+        }
+
+        /* Decorative Elements */
+        .floating-icon {
+            position: absolute;
+            color: rgba(212, 160, 18, 0.1);
+            font-size: 8rem;
+            z-index: 0;
+        }
+
+        .quote-block {
+            position: relative;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(212, 160, 18, 0.1) 0%, transparent 100%);
+            border-left: 4px solid var(--gold);
+            border-radius: 0 20px 20px 0;
+            margin: 30px 0;
+        }
+
+        .quote-block::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 6rem;
+            color: var(--gold);
+            opacity: 0.3;
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header py-4" id="header">
+        <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+          
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3">
+                
+                <img src="images/logo.png" alt="logo"  height="58" width="58" >
+                <div>
+                    <h1 class="logo-text text-xl md:text-2xl font-bold tracking-wide">EARLYBIRD</h1>
+                    <p class="text-xs text-gold-400 tracking-widest" style="color: #d4a012;">TRANSPORT<br/> & LOGISTICS SERVICES</p>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Services</a>
+                <a href="about.html" class="nav-link active">About Us</a>
+                <a href="#" class="nav-link">Routes</a>
+                <a href="#" class="nav-link">Testimonials</a>
+                <a href="#" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Contact Info & CTA -->
+            <div class="hidden lg:flex items-center gap-6">
+                <a href="tel:08086884486" class="flex items-center gap-2 text-white">
+                    <i class="fas fa-phone-alt" style="color: #d4a012;"></i>
+                    <span class="font-medium">08086884486</span>
+                </a>
+                <button class="btn-primary text-sm">Get Quote</button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-white text-2xl" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars" id="menuIcon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="absolute top-6 right-6 text-white text-3xl" onclick="toggleMobileMenu()">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="index.html" onclick="toggleMobileMenu()">Home</a>
+        <a href="#" onclick="toggleMobileMenu()">Services</a>
+        <a href="#" onclick="toggleMobileMenu()">About Us</a>
+        <a href="#" onclick="toggleMobileMenu()">Routes</a>
+        <a href="#" onclick="toggleMobileMenu()">Testimonials</a>
+        <a href="#" onclick="toggleMobileMenu()">Contact</a>
+        <button class="btn-primary mt-4">Get Quote</button>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="hero-pattern"></div>
+        <i class="fas fa-truck floating-icon" style="top: 20%; right: 10%;"></i>
+        <i class="fas fa-box floating-icon" style="bottom: 20%; left: 5%;"></i>
+
+        <div class="max-w-7xl mx-auto px-4 py-20 relative z-10">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <span class="current">About Us</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" style="font-family: 'Playfair Display', serif;">
+                About <span style="color: #d4a012;">Earlybird</span> Logistics
+            </h1>
+            <p class="text-xl text-gray-300 max-w-2xl">
+                Discover our story, mission, and the dedicated team that makes safe, speedy, and timely delivery possible across Nigeria.
+            </p>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="story-section py-24">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Image Side -->
+                <div class="relative hidden lg:block ">
+                    <div class="story-image">
+                        
+                            <img src="images/our_story.png"  alt='our story' />
+                        
+                    </div>
+                    <div class="experience-badge">
+                        <div class="number">15+</div>
+                        <div class="font-semibold">Years of Excellence</div>
+                    </div>
+                </div>
+                <!-- Content Side -->
+                <div>
+                    <span class="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6" style="background: rgba(212, 160, 18, 0.15); color: #d4a012;">
+                        <i class="fas fa-history mr-2"></i>Our Story
+                    </span>
+                    <h2 class="section-title left-align mb-8">The Journey of Earlybird</h2>
+
+                    <p class="text-gray-600 dark:text-gray-300 text-lg mb-6 leading-relaxed">
+                        Founded in 2009, <strong>Earlybird Transport & Logistics Services</strong> began with a simple vision: to revolutionize logistics in Nigeria by providing safe, speedy, and timely delivery services that businesses and individuals can truly rely on.
+                    </p>
+
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                        What started as a small operation with just two delivery vehicles in Lagos has grown into a comprehensive logistics network spanning multiple states across Nigeria. Our founder recognized the critical need for reliable transportation services that could bridge the gap between businesses and their customers.
+                    </p>
+
+                    <div class="quote-block">
+                        <p class="text-lg italic text-gray-700 dark:text-gray-200">
+                            "The early bird catches the worm — and we catch every delivery deadline. Our name reflects our commitment to being ahead of schedule, every single time."
+                        </p>
+                        <p class="mt-4 font-semibold" style="color: #d4a012;">— Founder, Earlybird Logistics</p>
+                    </div>
+
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Today, we serve thousands of customers across Lagos, Asaba, Onitsha, Awka, Enugu, and Abakaliki, with a growing fleet and an unwavering commitment to excellence.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="15">0+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="5000">0+</div>
+                    <div class="stat-label">Deliveries Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="50">0+</div>
+                    <div class="stat-label">Routes Covered</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="98">0%</div>
+                    <div class="stat-label">Customer Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision-section py-24">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col justify-center items-center mb-5">
+                <span class="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4" style="background: rgba(212, 160, 18, 0.2); color: #d4a012;">
+                    What Drives Us
+                </span>
+                <h2 class="section-title text-white">Mission & Vision</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Mission -->
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-6" style="font-family: 'Playfair Display', serif;">Our Mission</h3>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                    
+                       To be the first choice for logistics delivered through consistent client support and the provision of comprehensive logistics solutions.
+                    </p>
+                </div>
+
+                <!-- Vision -->
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-6" style="font-family: 'Playfair Display', serif;">Our Vision</h3>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                    
+                        To become Nigeria's most trusted and innovative logistics company, setting the gold standard for delivery excellence across Africa. We envision a future where every package reaches its destination safely, on time, and with the care it deserves.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="values-section py-24">
+           <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col justify-center items-center mb-5">
+                <span class="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4" style="background: rgba(212, 160, 18, 0.2); color: #d4a012;">
+                         Our Foundation
+                </span>
+                <h2 class="section-title text-white">Core Values</h2>
+                <p class="text-gray-300 dark:text-gray-300 mt-8 max-w-2xl mx-auto text-center">
+                    These principles guide every decision we make and every package we deliver.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Value 1 -->
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 dark:text-white" style="color: #1a365d;">Safety First</h3>
+                    <p class="text-gray-300 dark:text-gray-300">
+                        Every package is treated as precious cargo. We implement rigorous safety protocols to ensure your goods arrive in perfect condition.
+                    </p>
+                </div>
+
+                <!-- Value 2 -->
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 dark:text-white" style="color: #1a365d;">Speed & Efficiency</h3>
+                    <p class="text-gray-300 dark:text-gray-300">
+                        Time is money. Our optimized routes and dedicated team ensure the fastest possible delivery without compromising quality.
+                    </p>
+                </div>
+
+                <!-- Value 3 -->
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 dark:text-white" style="color: #1a365d;">Integrity</h3>
+                    <p class="text-gray-300 dark:text-gray-300">
+                        Honesty and transparency in all our dealings. We build trust through consistent, reliable service and open communication.
+                    </p>
+                </div>
+
+                <!-- Value 4 -->
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 dark:text-white" style="color: #1a365d;">Customer Focus</h3>
+                    <p class="text-gray-300 dark:text-gray-300">
+                        Your satisfaction is our priority. We listen, adapt, and go the extra mile to exceed your expectations every time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Timeline -->
+    <section class="py-24" style="background: linear-gradient(180deg, #fff 0%, #faf8f5 100%);">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="flex flex-col justify-center items-center mb-5 ">
+                <span class="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4 text-gray-600" style="background: rgba(212, 160, 18, 0.15); color: #d4a012;">
+                    Our Journey
+                </span>
+                <h2 class="section-title text-gray-600 dark:text-gray-300 " style="color: #1a365d;">Milestones</h2>
+            </div>
+
+            <div class="timeline">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2009</span>
+                        <h3 class="text-xl font-bold mb-3" style="color: #1a365d;">The Beginning</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Earlybird Transport & Logistics Services was founded in Lagos with just 2 delivery vehicles and a dream to transform logistics in Nigeria.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2012</span>
+                        <h3 class="text-xl font-bold mb-3" style="color: #1a365d;">Expansion Begins</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Extended our services to Asaba and Onitsha, establishing our first inter-state delivery routes and growing our fleet to 10 vehicles.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2016</span>
+                        <h3 class="text-xl font-bold mb-3" style="color: #1a365d;">Eastern Network</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Launched routes to Awka, Enugu, and Abakaliki, creating a comprehensive logistics network across the Southeast region.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2020</span>
+                        <h3 class="text-xl font-bold mb-3" style="color: #1a365d;">Digital Transformation</h3>
+                        <p class="text-gray-600">
+                            Implemented modern tracking systems and digital solutions to enhance customer experience during the global pandemic.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2024</span>
+                        <h3 class="text-xl font-bold mb-3" style="color: #1a365d;">Excellence Award</h3>
+                        <p class="text-gray-600">
+                            Received the Logistics Excellence Award and expanded our fleet with 10 new vehicles, reaching the milestone of 5,000+ successful deliveries.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section py-24">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col justify-center items-center">
+                <span class="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4" style="background: rgba(212, 160, 18, 0.15); color: #d4a012;">
+                    Our People
+                </span>
+                <h2 class="section-title">Meet the Team</h2>
+                <p class="text-gray-600 dark:text-gray-300 mt-8 max-w-2xl mx-auto">
+                    The dedicated professionals who make Earlybird's promise of excellence a reality every day.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="team-card">
+                    <div class="team-image">
+                        
+                        <img src="Test.jpeg" >
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3 class="text-xl font-bold dark:text-white" style="color: #1a365d;">Chukwuemeka Obi</h3>
+                        <p style="color: #d4a012;" class="font-semibold">Founder & CEO</p>
+                        <p class="text-gray-500 text-sm mt-2">15+ years in logistics and transportation management</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-card">
+                    <div class="team-image">
+                        <i class="fas fa-user"></i>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3 class="text-xl font-bold dark:text-white" style="color: #1a365d;">Adaeze Nwosu</h3>
+                        <p style="color: #d4a012;" class="font-semibold">Operations Manager</p>
+                        <p class="text-gray-500 text-sm mt-2">Expert in supply chain optimization</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-card">
+                    <div class="team-image">
+                        <i class="fas fa-user"></i>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3 class="text-xl font-bold dark:text-white" style="color: #1a365d;">Ifeanyi Eze</h3>
+                        <p style="color: #d4a012;" class="font-semibold">Fleet Manager</p>
+                        <p class="text-gray-500 text-sm mt-2">Manages our growing vehicle fleet</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="team-card">
+                    <div class="team-image">
+                        <i class="fas fa-user"></i>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3 class="text-xl font-bold dark:text-white" style="color: #1a365d;">Blessing Okoro</h3>
+                        <p style="color: #d4a012;" class="font-semibold">Customer Relations</p>
+                        <p class="text-gray-500 text-sm mt-2">Ensuring 100% customer satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-24">
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <span class="inline-block px-6 py-3 rounded-full text-sm font-bold mb-6" style="background: rgba(212, 160, 18, 0.2); color: #d4a012;">
+                <i class="fas fa-rocket mr-2"></i>Ready to Get Started?
+            </span>
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6" style="font-family: 'Playfair Display', serif;">
+                Partner with Nigeria's <span style="color: #d4a012;">Most Trusted</span> Logistics Company
+            </h2>
+            <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                Experience the Earlybird difference. Safe, speedy, and timely delivery guaranteed.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="btn-primary text-lg">
+                    <i class="fas fa-paper-plane mr-2"></i>Get a Quote
+                </button>
+                <button class="btn-secondary text-lg">
+                    <i class="fas fa-phone-alt mr-2"></i>Call: 08086884486
+                </button>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+    <footer class="footer py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="logo.png" alt="logo"  height="58" width="58" >
+                        <div>
+                            <h3 class="logo-text text-xl font-bold">EARLYBIRD</h3>
+                            <p class="text-xs" style="color: #d4a012;">LOGISTICS SERVICES</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Safe, Speedy and Timely Delivery Nationwide. Your trusted logistics partner since 2009.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="https://facebook.com/EarlybirdTransportLogisticsServices" class="social-icon" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com/earlybird_logistics" class="social-icon" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://tiktok.com/@Earlybird_logistics21" class="social-icon" target="_blank">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6" style="color: #d4a012;">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="#services" class="footer-link">Our Services</a></li>
+                        <li><a href="#about" class="footer-link">About Us</a></li>
+                        <li><a href="#routes" class="footer-link">Delivery Routes</a></li>
+                        <li><a href="#testimonials" class="footer-link">Testimonials</a></li>
+                        <li><a href="#contact" class="footer-link">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6" style="color: #d4a012;">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="footer-link">Cargo Handling</a></li>
+                        <li><a href="#" class="footer-link">Logistics Solutions</a></li>
+                        <li><a href="#" class="footer-link">Parcel Delivery</a></li>
+                        <li><a href="#" class="footer-link">Express Dispatch</a></li>
+                        <li><a href="#" class="footer-link">General Merchant</a></li>
+                        <li><a href="#" class="footer-link">Warehousing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6" style="color: #d4a012;">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to get updates on our latest offers and services.</p>
+                    <form id="newsletterForm" class="space-y-3">
+                        <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+                        <button type="submit" class="w-full btn-primary">
+                            Subscribe <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-gray-800 pt-8 mt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-gray-400 text-sm text-center md:text-left">
+                        &copy; 2025 Earlybird Transport & Logistics Services. All rights reserved.
+                    </p>
+                    <div class="flex gap-6 text-sm">
+                        <a href="#" class="footer-link">Privacy Policy</a>
+                        <a href="#" class="footer-link">Terms of Service</a>
+                        <a href="#" class="footer-link">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 w-12 h-12 rounded-full flex items-center justify-center z-50 opacity-0 invisible transition-all duration-300" style="background: linear-gradient(135deg, #d4a012 0%, #b7860b 100%); color: #0a1628;">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Custom Modal -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4 transform transition-all">
+            <div class="text-center">
+                <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background: rgba(212, 160, 18, 0.2);">
+                    <i class="fas fa-check text-3xl" style="color: #d4a012;"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-2" style="color: #1a365d;">Thank You!</h3>
+                <p class="text-gray-600 mb-6" id="modalMessage">You have successfully subscribed to our newsletter!</p>
+                <button onclick="closeModal()" class="btn-primary">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Dark mode detection
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('menuIcon');
+            menu.classList.toggle('active');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            const backToTop = document.getElementById('backToTop');
+
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+                backToTop.style.opacity = '1';
+                backToTop.style.visibility = 'visible';
+            } else {
+                header.classList.remove('scrolled');
+                backToTop.style.opacity = '0';
+                backToTop.style.visibility = 'hidden';
+            }
+        });
+
+        // Back to top
+        document.getElementById('backToTop').addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Counter animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const suffix = counter.textContent.includes('%') ? '%' : '+';
+                const duration = 2000;
+                const step = target / (duration / 16);
+                let current = 0;
+
+                const updateCounter = () => {
+                    current += step;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current) + suffix;
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target + suffix;
+                    }
+                };
+
+                updateCounter();
+            });
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.classList.contains('stats-section')) {
+                        animateCounters();
+                    }
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.value-card, .mv-card, .team-card, .timeline-content').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Observe stats section
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+
+        // Modal functions
+        function showModal(message) {
+            document.getElementById('modalMessage').textContent = message;
+            document.getElementById('modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
+
+        // Newsletter form
+        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            showModal('Thank you for subscribing! You\'ll receive our latest updates and offers.');
+            this.reset();
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const headerHeight = document.getElementById('header').offsetHeight;
+                        const targetPosition = target.offsetTop - headerHeight;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Staggered animation for timeline items
+        document.querySelectorAll('.timeline-item').forEach((item, index) => {
+            item.style.animationDelay = `${index * 0.2}s`;
+        });
+    </script>
+</body>
+</html>
